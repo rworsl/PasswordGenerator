@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "w0GEberHoAxz3wZbE/dz1H1Mzblb+8X6qJ613SZGk3+COOtihV0oKvUfg4oi3OLW5bl6fnBnvzuzcuZo9FEpUA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Rich\\source\\repos\\PasswordGenerator\\PasswordGenerator\\PasswordGenerator.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Rich\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.10\\microsoft.aspnetcore.app.ref.3.1.10.nupkg.sha512",
+    "C:\\Users\\Rich\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.11\\microsoft.netcore.app.host.win-x64.3.1.11.nupkg.sha512"
+  ],
+  "logs": []
+}
