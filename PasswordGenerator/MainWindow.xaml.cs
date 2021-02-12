@@ -35,9 +35,28 @@ namespace PasswordGenerator
         {
             password = "";
             wordCount();
-            int value = RandomIntGenerator();
-            password = value.ToString();
+            //int value = RandomIntGenerator();
+            //password = value.ToString();
+            createWord();
             presentResult();
+        }
+
+        /// <summary>
+        /// Assembles the suggested password
+        /// </summary>
+        private void createWord()
+        {
+            for (int counter = 0; counter < wordNum; counter++)
+            {
+                int value = RandomIntGenerator();
+                while (words.ContainsKey(value) != true)
+                {
+                    value = RandomIntGenerator();
+                }
+                string holder = words[value].ToString();
+                var capital = char.ToUpper(holder[0]) + holder.Substring(1);
+                password += capital;
+            }
         }
 
         /// <summary>
@@ -69,6 +88,10 @@ namespace PasswordGenerator
             }
         }
 
+
+        /// <summary>
+        /// Loads all the int/string values from a text file into a dictionary
+        /// </summary>
         private void LoadDictionary() 
         {
             using (var readtextfile = new StreamReader("wordList.txt"))
@@ -87,6 +110,10 @@ namespace PasswordGenerator
             }
         }
 
+        /// <summary>
+        /// Generates a random integer in the range 11111-66666
+        /// </summary>
+        /// <returns></returns>
         static int RandomIntGenerator()
         {
             int lowerBound = 11111;
@@ -99,6 +126,9 @@ namespace PasswordGenerator
             return result;
         }
 
+        /// <summary>
+        /// Changes the resulting text on the app
+        /// </summary>
         private void presentResult() 
         {
             //password = wordNum.ToString();
