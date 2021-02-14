@@ -38,6 +38,7 @@ namespace PasswordGenerator
             //int value = RandomIntGenerator();
             //password = value.ToString();
             createWord();
+            password = replaceWithNums(password);
             presentResult();
         }
 
@@ -88,6 +89,54 @@ namespace PasswordGenerator
             }
         }
 
+        private string replaceWithNums(string inputWord)
+        {
+            string outputString = "";
+            foreach(char letter in inputWord)
+            {
+                if (letter == 'a' || letter == 'A')
+                {
+                    outputString += '4';
+                }
+                else if (letter == 'b' || letter == 'B')
+                {
+                    outputString += '8';
+                }
+                else if (letter == 'e' || letter == 'E')
+                {
+                    outputString += '3';
+                }
+                else if (letter == 'g' || letter == 'G')
+                {
+                    outputString += '6';
+                }
+                else if (letter == 'i' || letter == 'I')
+                {
+                    outputString += '1';
+                }
+                else if (letter == 'o' || letter == 'O')
+                {
+                    outputString += '0';
+                }
+                else if (letter == 's' || letter == 'S')
+                {
+                    outputString += '5';
+                }
+                else if (letter == 't' || letter == 'T')
+                {
+                    outputString += '7';
+                }
+                else if (letter == 'z' || letter == 'Z')
+                {
+                    outputString += '2';
+                }
+                else
+                {
+                    outputString += letter;
+                }
+            }
+            return outputString;
+        }
 
         /// <summary>
         /// Loads all the int/string values from a text file into a dictionary
