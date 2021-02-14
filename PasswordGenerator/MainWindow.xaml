@@ -26,7 +26,9 @@
         </ComboBox>
         <TextBlock Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="80,0,0,0">Set number of words:</TextBlock>
         <Button x:Name="GeneratePassword" Grid.Row="0" Grid.Column="1" Width="266" FontSize="12" HorizontalAlignment="Center" Margin="0,87,0,10" Click="Button_Click">Create</Button>
+        <CheckBox x:Name="numCheck" Grid.Row="1" Grid.Column="1" Margin="60,0,0,0">Include numbers</CheckBox>
+        <CheckBox x:Name="symCheck" Grid.Row="1" Grid.Column="1" Margin="200,0,0,0">Include symbols</CheckBox>
         <TextBlock Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,25,0,0" Grid.Row="1">Your randomly generated password is:</TextBlock>
-        <TextBlock Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Name ="OutputResult" Text="gowowngw" FontFamily="Comic Sans" Foreground="Red" />
+        <TextBlock Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Name ="OutputResult" Text="" FontFamily="Comic Sans" Foreground="Red" />
     </Grid>
 </Window>

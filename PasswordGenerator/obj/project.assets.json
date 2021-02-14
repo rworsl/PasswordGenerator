@@ -8,23 +8,23 @@
     ".NETCoreApp,Version=v3.1": []
   },
   "packageFolders": {
-    "C:\\Users\\Rich\\.nuget\\packages\\": {},
+    "C:\\Users\\RichW\\.nuget\\packages\\": {},
     "C:\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Rich\\Desktop\\Projects\\PasswordGenerator\\PasswordGenerator\\PasswordGenerator\\PasswordGenerator.csproj",
+      "projectUniqueName": "C:\\Users\\RichW\\Desktop\\Projects\\PasswordGenerator\\PasswordGenerator\\PasswordGenerator.csproj",
       "projectName": "PasswordGenerator",
-      "projectPath": "C:\\Users\\Rich\\Desktop\\Projects\\PasswordGenerator\\PasswordGenerator\\PasswordGenerator\\PasswordGenerator.csproj",
-      "packagesPath": "C:\\Users\\Rich\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Rich\\Desktop\\Projects\\PasswordGenerator\\PasswordGenerator\\PasswordGenerator\\obj\\",
+      "projectPath": "C:\\Users\\RichW\\Desktop\\Projects\\PasswordGenerator\\PasswordGenerator\\PasswordGenerator.csproj",
+      "packagesPath": "C:\\Users\\RichW\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\RichW\\Desktop\\Projects\\PasswordGenerator\\PasswordGenerator\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\Rich\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\RichW\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],

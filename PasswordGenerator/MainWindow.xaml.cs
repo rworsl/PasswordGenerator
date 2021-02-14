@@ -35,10 +35,7 @@ namespace PasswordGenerator
         {
             password = "";
             wordCount();
-            //int value = RandomIntGenerator();
-            //password = value.ToString();
             createWord();
-            password = replaceWithNums(password);
             presentResult();
         }
 
@@ -56,6 +53,14 @@ namespace PasswordGenerator
                 }
                 string holder = words[value].ToString();
                 var capital = char.ToUpper(holder[0]) + holder.Substring(1);
+                if (numCheck.IsChecked == true)
+                {
+                    capital = replaceWithNums(capital);
+                }
+                if (symCheck.IsChecked == true)
+                {
+                    capital = replaceWithSymbol(capital);
+                }
                 password += capital;
             }
         }
@@ -89,51 +94,120 @@ namespace PasswordGenerator
             }
         }
 
+        /// <summary>
+        /// Replaces certain characters with numbers. CNan be limited to a maximum number of replacements per word
+        /// </summary>
+        /// <param name="inputWord">the generated password</param>
+        /// <returns></returns>
         private string replaceWithNums(string inputWord)
         {
             string outputString = "";
-            foreach(char letter in inputWord)
+            int counter = 0;
+            while (counter < 3)
             {
-                if (letter == 'a' || letter == 'A')
+                foreach (char letter in inputWord)
                 {
-                    outputString += '4';
+
+                    if (letter == 'a' && counter < 2 || letter == 'A' && counter < 2)
+                    {
+                        outputString += '4';
+                        counter += 1;
+                    }
+                    else if (letter == 'b' && counter < 2 || letter == 'B' && counter < 2)
+                    {
+                        counter += 1;
+                        outputString += '8';
+                    }
+                    else if (letter == 'e' && counter < 2 || letter == 'E' && counter < 2)
+                    {
+                        counter += 1;
+                        outputString += '3';
+                    }
+                    else if (letter == 'g' && counter < 2 || letter == 'G' && counter < 2)
+                    {
+                        outputString += '6';
+                        counter += 1;
+                    }
+                    else if (letter == 'i' && counter < 2 || letter == 'I' && counter < 2)
+                    {
+                        outputString += '1';
+                        counter += 1;
+                    }
+                    else if (letter == 'o' && counter < 2 || letter == 'O' && counter < 2)
+                    {
+                        outputString += '0';
+                        counter += 1;
+                    }
+                    else if (letter == 's' && counter < 2 || letter == 'S' && counter < 2)
+                    {
+                        outputString += '5';
+                        counter += 1;
+                    }
+                    else if (letter == 't' && counter < 2 || letter == 'T' && counter < 2)
+                    {
+                        outputString += '7';
+                        counter += 1;
+                    }
+                    else if (letter == 'z' && counter < 2 || letter == 'Z' && counter < 2)
+                    {
+                        outputString += '2';
+                        counter += 1;
+                    }
+                    else
+                    {
+                        outputString += letter;
+                    }
                 }
-                else if (letter == 'b' || letter == 'B')
+                counter += 1;
+            }
+            return outputString;
+        }
+
+        /// <summary>
+        /// Replaces certain characters with symbols. CNan be limited to a maximum number of replacements per word
+        /// </summary>
+        /// <param name="inputWord">the generated password</param>
+        /// <returns></returns>
+        private string replaceWithSymbol(string inputWord)
+        {
+            string outputString = "";
+            int counter = 0;
+            while (counter < 3)
+            {
+                foreach (char letter in inputWord)
                 {
-                    outputString += '8';
+
+                    if (letter == 'c' && counter < 2 || letter == 'C' && counter < 2)
+                    {
+                        outputString += '(';
+                        counter += 1;
+                    }
+                    else if (letter == 'a' && counter < 2 || letter == 'A' && counter < 2)
+                    {
+                        counter += 1;
+                        outputString += '@';
+                    }
+                    else if (letter == 'e' && counter < 2 || letter == 'E' && counter < 2)
+                    {
+                        counter += 1;
+                        outputString += '£';
+                    }
+                    else if (letter == 's' && counter < 2 || letter == 'S' && counter < 2)
+                    {
+                        outputString += '$';
+                        counter += 1;
+                    }
+                    else if (letter == 'i' && counter < 2 || letter == 'I' && counter < 2)
+                    {
+                        outputString += '!';
+                        counter += 1;
+                    }
+                    else
+                    {
+                        outputString += letter;
+                    }
                 }
-                else if (letter == 'e' || letter == 'E')
-                {
-                    outputString += '3';
-                }
-                else if (letter == 'g' || letter == 'G')
-                {
-                    outputString += '6';
-                }
-                else if (letter == 'i' || letter == 'I')
-                {
-                    outputString += '1';
-                }
-                else if (letter == 'o' || letter == 'O')
-                {
-                    outputString += '0';
-                }
-                else if (letter == 's' || letter == 'S')
-                {
-                    outputString += '5';
-                }
-                else if (letter == 't' || letter == 'T')
-                {
-                    outputString += '7';
-                }
-                else if (letter == 'z' || letter == 'Z')
-                {
-                    outputString += '2';
-                }
-                else
-                {
-                    outputString += letter;
-                }
+                counter += 1;
             }
             return outputString;
         }
